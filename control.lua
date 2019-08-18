@@ -64,3 +64,9 @@ require "control.migration-control"
 
 script.on_configuration_changed(ribbonMazeConfigurationChanged)
 script.on_event(defines.events.on_runtime_mod_setting_changed, ribbonMazeModSettingChanged)
+
+
+remote.add_interface("RibbonMaze",{
+	["insert_mod_surface"]=function(surface_name) table.insert(global.ribbonMazeConfig.modSurfaces,surface_name) end,
+	["remove_mod_surface"]=function(surface_name) table.remove(global.ribbonMazeConfig.modSurfaces,surface_name) end,
+})
