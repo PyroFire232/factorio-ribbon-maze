@@ -78,7 +78,7 @@ remote.add_interface("RibbonMaze",{
 	["remove_mod_surface"]=function(surface_name)
 		for tableIndex,surfaceName in pairs(global.ribbonMazeConfig.modSurfaces)do
 			if(surfaceName==surface_name)then
-				return table.remove(global.ribbonMazeConfig.modSurfaces,table_index)
+				return table.remove(global.ribbonMazeConfig.modSurfaces,tableIndex)
 			end
 		end
 		return false
